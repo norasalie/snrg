@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Abriendo Correo</title>
+</head>
+<body>
+
+    <p>Abriendo tu cliente de correo... Si no se abre, revisa la configuración de tu navegador o sistema operativo para el manejo de enlaces "mailto:".</p>
+
+    <script>
+        // Lista de correos electrónicos para enviar como Copia Oculta (CCO).
+        // ¡Recuerda reemplazarlos con los correos reales!
+        const destinatariosCco = [
+          "sleoncastillo@gmail.com",
+          "persona2@ejemplo.com",
+          "persona3@ejemplo.com",
+          "persona4@ejemplo.com",
+          "persona5@ejemplo.com",
+          "persona6@ejemplo.com"
+        ];
+        
+        // Asunto del correo.
+        const asunto = "Asunto del correo predeterminado";
+
+        // Cuerpo del mensaje. Usa \n para los saltos de línea.
+        const cuerpoMensaje = "Hola,\n\nEste es un correo predeterminado que te estoy enviando.";
+        
+        // Une los correos con una coma para la URL.
+        const listaDestinatarios = destinatariosCco.join(",");
+        
+        // Codifica el asunto y el cuerpo del mensaje para que la URL sea válida.
+        const asuntoCodificado = encodeURIComponent(asunto);
+        const cuerpoCodificado = encodeURIComponent(cuerpoMensaje);
+
+        // Construye la URL completa con el parámetro 'bcc' para la copia oculta.
+        const mailtoURL = `mailto:?bcc=${listaDestinatarios}&subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
+        
+        // Abre el cliente de correo predeterminado del usuario de manera inmediata.
+        window.location.href = mailtoURL;
+    </script>
+
+</body>
+</html>
