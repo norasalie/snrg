@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Abriendo Correo</title>
 </head>
 <body>
 
+    <p><b>¡GRACIAS POR COMPROMETERTE!</b> Te estamos redirigiendo al correo. Si este enlace no se abre, revisa la configuración de tu navegador o sistema operativo.</p>
     <p> GRACIAS POR COMPROMETERTE, te estamos redirigiendo al correo. Si este enlace no se abre, revisa la configuración de tu navegador o sistema operativo para el manejo de enlaces "mailto:".</p>
 
     <script>
         // Lista de correos electrónicos para enviar como Copia Oculta (CCO).
+        // Direcciones de correos para el mail masivo: NO olvidar quitar comentario en los correos finales
         // ¡Recuerda reemplazarlos con los correos reales!
         const destinatariosCco = [
+            "sleoncastillo@gmail.com",
+            //"francisco@levicechocolat.com",
+            //"earaneda@losaldes.cl",
+            //"anoronha@gnbrands.com",
+            //"apedreros@uniservice.cl",
+            "campaign@loshuevosquetefaltan.com"
           "sleoncastillo@gmail.com",
           "campaign@loshuevosquetefaltan.com"
         ];
-        
+
         // Asunto del correo.
+        const asunto = "¡TODOS MIENTEN! CUMPLE CON TUS PROMESAS";
         const asunto = "¡Todos mienten! Cumple con tus promesas!”;
 
         // Cuerpo del mensaje. Usa \n para los saltos de línea.
+        const cuerpoMensaje = "Estimado/a,\n\n\nA través de este correo quiero sumarme a la campaña Los huevos que te faltan liderada por\nSinergia Animal y exigir el reporte de implementación del compromiso de uso de huevos de\ngallinas libres de jaula que hicieron público y que vence este 2025.\n\nSi estás leyendo esto, es porque decidieron ignorar las solicitudes de reporte de avance que\nSinergia Animal ya les hizo. Hoy, quienes lo exigimos somos sus clientes. El origen de los\nhuevos que utilizan en su producción u oferta ¡SI IMPORTA!.\n\nQue tus promesas dejen de ser una herramienta de marketing y se conviertan en hechos.\nHoy te envío este correo y muy pronto, los huevos que te faltan. Las gallinas en jaula no\npueden seguir esperando.\n\nSaludos cordiales\n\n[NOMBRE O FIRMA]";
         const cuerpoMensaje = "Hola,\n\nEsta es una prueba”;
-        
+
+        // Esto une los correos con una coma para la URL.
         // Une los correos con una coma para la URL.
         const listaDestinatarios = destinatariosCco.join(",");
         
@@ -38,92 +44,3 @@
 
 </body>
 </html></div>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Abriendo Correo</title>
-</head>
-<body>
-
-    <p>Abriendo tu cliente de correo... Si no se abre, revisa la configuración de tu navegador o sistema operativo para el manejo de enlaces "mailto:".</p>
-
-    <script>
-        // Lista de correos electrónicos para enviar como Copia Oculta (CCO).
-        // ¡Recuerda reemplazarlos con los correos reales!
-        const destinatariosCco = [
-          "sleoncastillo@gmail.com",
-          "persona2@ejemplo.com",
-          "persona3@ejemplo.com",
-          "persona4@ejemplo.com",
-          "persona5@ejemplo.com",
-          "persona6@ejemplo.com"
-        ];
-        
-        // Asunto del correo.
-        const asunto = "Asunto del correo predeterminado";
-
-        // Cuerpo del mensaje. Usa \n para los saltos de línea.
-        const cuerpoMensaje = "Hola,\n\nEste es un correo predeterminado que te estoy enviando.";
-        
-        // Une los correos con una coma para la URL.
-        const listaDestinatarios = destinatariosCco.join(",");
-        
-        // Codifica el asunto y el cuerpo del mensaje para que la URL sea válida.
-        const asuntoCodificado = encodeURIComponent(asunto);
-        const cuerpoCodificado = encodeURIComponent(cuerpoMensaje);
-
-        // Construye la URL completa con el parámetro 'bcc' para la copia oculta.
-        const mailtoURL = `mailto:?bcc=${listaDestinatarios}&subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
-        
-        // Abre el cliente de correo predeterminado del usuario de manera inmediata.
-        window.location.href = mailtoURL;
-    </script>
-
-</body>
-</html>
-
